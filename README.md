@@ -1,18 +1,77 @@
-# Expense Tracker CLI
+# Expense Tracker
 
-A simple command-line application to manage and track your expenses. You can add expenses with descriptions and view them later. Data is stored in a local file.
+A simple expense tracking project with two versions:
 
-## Features
+- **CLI Version** — A command-line app to log and view expenses.
+- **Web App Version** — A Flask-based web interface to manage expenses in the browser.
 
-- Add expense amount and description
-- View all expenses with numbering
-- Expenses saved in `expenses.txt`
+---
 
-## Requirements
+## 📁 Project Structure
 
-- Python 3
+project/
+├── cli/
+│ └── expense_tracker.py
+│
+├── web/
+│ ├── expense_tracker.py
+│ ├── templates/
+│ │ └── index.html
+│ └── static/
+│ └── js/
+│ └── script.js
+│
+├── expenses.txt
+├── requirements.txt
+├── .gitignore
+├── README.md
 
-## How to Run
+---
+
+## 📦 Requirements
+
+- Python 3.x
+- Flask (for the web version)
+
+Install dependencies:
 
 ```bash
+pip install -r requirements.txt
+
+🖥 CLI Version
+▶ How to Run
+cd cli
 python expense_tracker.py
+Features
+Add expenses with amount and description
+
+View all expenses with numbering
+
+Stores data in expenses.txt (shared with web app)
+
+🌐 Web App Version
+▶ How to Run
+cd web
+python expense_tracker.py
+Then open your browser and go to:
+
+http://localhost:5000
+Features
+Add and view expenses through a browser
+
+Clean UI with HTML + JS
+
+Data saved in shared expenses.txt
+
+🔒 Note
+To protect local data, expenses.txt is listed in .gitignore and will not be pushed to GitHub.
+
+📌 Future Plans
+Add animations using GSAP (next commit)
+
+Add delete/edit functionality
+
+
+👤 Author
+Made by [Nishith]
+---
