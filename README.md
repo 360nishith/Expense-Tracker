@@ -8,7 +8,7 @@ A simple expense tracking project with two versions:
 ---
 
 ## 📁 Project Structure
-
+```
 
 project/
 ├── cli/
@@ -26,7 +26,7 @@ project/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
+```
 ---
 
 ## 📦 Requirements
