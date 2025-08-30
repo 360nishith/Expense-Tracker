@@ -24,7 +24,7 @@ project/
 ├── expenses.txt
 ├── requirements.txt
 ├── .gitignore
-├── README.md
+└── README.md
 
 ---
 
