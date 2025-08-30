@@ -1,4 +1,3 @@
-```markdown
 # Expense Tracker
 
 A simple expense tracking project with two versions:
@@ -10,26 +9,23 @@ A simple expense tracking project with two versions:
 
 ## 📁 Project Structure
 
-```
 
 project/
 ├── cli/
-│   └── expense\_tracker.py
+│ └── expense_tracker.py
 │
 ├── web/
-│   ├── expense\_tracker.py
-│   ├── templates/
-│   │   └── index.html
-│   └── static/
-│       └── js/
-│           └── script.js
+│ ├── expense_tracker.py
+│ ├── templates/
+│ │ └── index.html
+│ └── static/
+│ └── js/
+│ └── script.js
 │
 ├── expenses.txt
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
-````
 
 ---
 
@@ -42,14 +38,9 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-````
-
----
-
+```
 ## 🖥 CLI Version
-
-### How to Run
-
+How to Run
 ```bash
 cd cli
 python expense_tracker.py
@@ -88,7 +79,7 @@ http://localhost:5000
 
 ## 🔒 Note
 
-To protect local data, `expenses.txt` is listed in `.gitignore` and will **not** be pushed to GitHub.
+To protect local data, `expenses.txt` will **not** be pushed to GitHub.
 
 ---
 
@@ -103,9 +94,4 @@ To protect local data, `expenses.txt` is listed in `.gitignore` and will **not**
 
 Made by \[Nishith]
 
-```
 
----
-
-If you want, I can also help you create `.gitignore` or `requirements.txt` files or anything else for your project! Just ask.
-```
