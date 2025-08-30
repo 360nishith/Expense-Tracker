@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- Form to add a new expense -->
+    <form action="/add" method="POST">
+      <input type="number" name="amount" step="0.01" placeholder="Amount (₹)" required>
+      <input type="text" name="description" placeholder="Description" required>
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- List of all expenses -->
+    <h2>All Expenses</h2>
+    {% if expenses %}
+      <ul>
+        {% for amount, desc in expenses %}
+          <li>₹{{ '%.2f'|format(amount) }} - {{ desc }}</li>
+        {% endfor %}
+      </ul>
+      <h3>Total: ₹{{ '%.2f'|format(total) }}</h3>
+    {% else %}
+      <p>No expenses added yet.</p>
+    {% endif %}
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
