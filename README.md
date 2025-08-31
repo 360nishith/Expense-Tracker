@@ -12,20 +12,23 @@ A simple expense tracking project with two versions:
 
 project/
 ├── cli/
-│ └── expense_tracker.py
+│   └── expense_tracker.py
 │
 ├── web/
-│ ├── expense_tracker.py
-│ ├── templates/
-│ │ └── index.html
-│ └── static/
-│ └── js/
-│ └── script.js
+│   ├── expense_tracker.py
+│   ├── templates/
+│   │   └── index.html
+│   └── static/
+│       ├── css/
+│       │   └── style.css
+│       └── js/
+│           └── script.js
 │
 ├── expenses.txt
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
 ```
 ---
 
