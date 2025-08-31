@@ -83,13 +83,6 @@ To protect local data, `expenses.txt` will **not** be pushed to GitHub.
 
 ---
 
-## 📌 Future Plans
-
-* Add animations using GSAP (next commit)
-* Add delete/edit functionality
-
----
-
 ## 👤 Author
 
 Made by \[Nishith]
