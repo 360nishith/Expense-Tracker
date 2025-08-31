@@ -4,7 +4,6 @@ import os
 app = Flask(__name__)
 expenses = [] 
 
-
 def load_expenses():
     if os.path.exists("expenses.txt"):
         with open("expenses.txt", "r") as file:
