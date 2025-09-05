@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Expense</title>
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <!-- Heading for editing an expense -->
+    <h1>Edit Expense</h1>
+
+    <!-- Form to update existing expense -->
+    <!-- POST request sent to /edit/<idx> route -->
+    <form action="{{ url_for('edit', idx=idx) }}" method="POST">
+      <!-- Pre-fill amount field with existing value -->
+      <input type="number" name="amount" step="0.01" placeholder="Amount (₹)" value="{{ amount }}" required />
+      <!-- Pre-fill description field with existing value -->
+      <input type="text" name="description" placeholder="Description" value="{{ description }}" required />
+      <!-- Submit button to save changes -->
+      <button type="submit">Update</button>
+    </form>
+
+    <!-- Link back to homepage -->
+    <a href="{{ url_for('index') }}">Back to Home</a>
+  </div>
+
+  <!-- Include GSAP animation library from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Optional JS file for animations -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

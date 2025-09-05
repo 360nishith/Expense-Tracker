@@ -1,55 +1,102 @@
+/* Set the overall font and background for the whole page */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f6f8;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    background: #f4f6f8; /* Light gray-blue background */
+    color: #333; /* Dark gray text for readability */
     margin: 0;
     padding: 20px;
 }
 
+/* Container to center the content and add padding and shadows */
 .container {
-    max-width: 600px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 600px; /* Limit width for better readability */
+    margin: 40px auto; /* Center horizontally with top & bottom margin */
+    background: white; /* White background for content */
+    padding: 30px 40px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft shadow for 3D effect */
 }
 
+/* Heading styles with consistent top margin */
 h1, h2, h3 {
     margin-top: 0;
 }
 
+/* Styling form inputs and buttons */
 form input, form button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    display: block; /* Each element takes full width */
+    width: 100%; /* Full width for ease of use */
+    margin: 10px 0; /* Space between inputs */
+    padding: 12px; /* Padding inside inputs */
+    font-size: 16px; /* Readable font size */
+    border-radius: 4px; /* Slightly rounded inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    box-sizing: border-box; /* Includes padding in width */
 }
 
+/* Style specifically for the submit button */
 form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #007bff; /* Bright blue background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
+/* Hover effect for the submit button */
 form button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
+/* Remove bullets and padding from expense list */
 ul {
-    list-style: none;
+    list-style: none; /* No bullets */
     padding: 0;
 }
 
+/* Style individual expense items */
 li {
-    background: #eaf0f4;
-    margin: 5px 0;
-    padding: 10px 15px;
+    background: #eaf0f4; /* Light blue-gray background */
+    margin: 5px 0; /* Small vertical spacing */
+    padding: 10px 15px; /* Padding inside each list item */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Spread content apart */
+    align-items: center; /* Vertically center items */
+}
+
+/* Style for edit and delete buttons inside list items */
+.edit-btn, .delete-btn {
+    margin-left: 10px; /* Space between buttons */
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Blue text */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Delete button hover effect */
+.delete-btn:hover {
+    color: #dc3545; /* Red color on hover */
+}
+
+/* Flash messages styling */
+.flash-messages {
+    background-color: #d4edda; /* Light green background for success */
+    border: 1px solid #c3e6cb; /* Green border */
+    color: #155724; /* Dark green text */
+    padding: 10px;
     border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Link styling for back to home in edit page */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
