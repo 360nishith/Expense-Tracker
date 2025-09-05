@@ -96,6 +96,6 @@ Made by **\[Nishith]**
 
 ---
 
-## 📄 License
+📄 License
 
 This project is open-source. Feel free to use or modify it as needed.

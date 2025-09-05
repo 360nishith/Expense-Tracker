@@ -1,3 +1,9 @@
+
+---
+
+## ✅ Final Version: `web/expense_tracker.py`
+
+```python
 from flask import Flask, render_template, request, redirect, flash
 import csv
 import os
@@ -39,11 +45,8 @@ def add_expense(amount, description):
 @app.route("/")
 def index():
     load_expenses()  # Reload data from CSV to sync with file
-    # Calculate total sum of all expenses
     total = sum(amount for amount, _ in expenses)
-    # Add an index to each expense for easy referencing (used in edit/delete)
     expenses_with_index = [(amount, desc, idx) for idx, (amount, desc) in enumerate(expenses)]
-    # Render the index.html template with expenses list and total
     return render_template("index.html", expenses=expenses_with_index, total=total)
 
 # Route: Handle adding a new expense via POST form
@@ -84,18 +87,16 @@ def edit(idx):
 def delete(idx):
     load_expenses()  # Reload current data
 
-    # Validate index range
     if idx < 0 or idx >= len(expenses):
         flash("Invalid expense selected.")  # Flash error if invalid
         return redirect("/")
 
     removed = expenses.pop(idx)  # Remove expense from in-memory list
     save_all_expenses()  # Save updated list to CSV
-    # Flash message indicating which expense was deleted
-    flash(f"Deleted expense: ₹{removed[0]} - {removed[1]}")
+    flash(f"Deleted expense: ₹{removed[0]} - {removed[1]}")  # Flash which was deleted
     return redirect("/")
 
 # Entry point to start the Flask application
 if __name__ == "__main__":
     load_expenses()  # Load expenses before starting the server
-    app.run(debug=True)  # Run app with debug mode on for development
+    app.run(debug=True)  # Run app with debug mode on
