@@ -1,93 +1,101 @@
-# Expense Tracker
+# 📊 Expense Tracker
 
-A simple expense tracking project with two versions:
-
-- **CLI Version** — A command-line app to log and view expenses.
-- **Web App Version** — A Flask-based web interface to manage expenses in the browser.
+A simple and interactive **Expense Tracker** web application built with **Flask**, storing data in a CSV file. It features a clean UI and smooth animations using **GSAP**.
+Track your spending, manage descriptions, and calculate totals — all from your browser.
 
 ---
 
-## 📁 Project Structure
-```
+## 🚀 Features
 
+* ✅ Add, edit, and delete expenses
+* ✅ Total expense calculation
+* ✅ Data saved locally in `expenses.csv`
+* ✅ Responsive UI with smooth animations
+* ✅ Built with Flask, HTML/CSS, JavaScript, and GSAP
+
+---
+
+## 🗂️ Project Structure
+
+```
 project/
-├── cli/
-│   └── expense_tracker.py
-│
 ├── web/
-│   ├── expense_tracker.py
+│   ├── expense_tracker.py        # Flask backend
 │   ├── templates/
-│   │   └── index.html
+│   │   ├── index.html            # Main page
+│   │   └── edit.html             # Edit form page
 │   └── static/
 │       ├── css/
-│       │   └── style.css
+│       │   └── style.css         # CSS
 │       └── js/
-│           └── script.js
+│           └── script.js         # GSAP animations
 │
-├── expenses.txt
-├── requirements.txt
+├── expenses.csv                  # Stored expenses (auto-created)
+├── requirements.txt              # Python dependencies
 ├── .gitignore
 └── README.md
-
 ```
+
+---
+
+## 🛠️ Tech Stack
+
+* **Backend**: Python, Flask
+* **Frontend**: HTML, CSS, JavaScript, GSAP
+* **Storage**: CSV file (`expenses.csv`)
+
+---
+
+## 🔧 Setup Instructions
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo/web
+   ```
+
+2. **Create and activate a virtual environment**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate     # On macOS/Linux
+   venv\Scripts\activate        # On Windows
+   ```
+
+3. **Install dependencies**
+
+   ```bash
+   pip install -r ../requirements.txt
+   ```
+
+4. **Run the app**
+
+   ```bash
+   python expense_tracker.py
+   ```
+
+   Open your browser and go to:
+
+   ```
+   http://localhost:5000
+   ```
+
 ---
 
 ## 📦 Requirements
 
-- Python 3.x  
-- Flask (for the web version)
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-## 🖥 CLI Version
-How to Run
-```bash
-cd cli
-python expense_tracker.py
-```
-
-### Features
-
-* Add expenses with amount and description
-* View all expenses with numbering
-* Stores data in `expenses.txt` (shared with web app)
+* Python 3.x
+* Flask (`pip install flask`)
 
 ---
 
-## 🌐 Web App Version
+## ✍️ Author
 
-### How to Run
-
-```bash
-cd web
-python expense_tracker.py
-```
-
-Then open your browser and go to:
-
-```
-http://localhost:5000
-```
-
-### Features
-
-* Add and view expenses through a browser
-* Clean UI with HTML + JavaScript
-* Data saved in shared `expenses.txt`
+Made by **\[Nishith]**
 
 ---
 
-## 🔒 Note
+## 📄 License
 
-To protect local data, `expenses.txt` will **not** be pushed to GitHub.
-
----
-
-## 👤 Author
-
-Made by \[Nishith]
-
-
+This project is open-source. Feel free to use or modify it as needed.
